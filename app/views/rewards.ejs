@@ -1,0 +1,55 @@
+<%- layout('layout') -%>
+<div id="rewardregister" class="container">
+
+  <div class="jumbotron">
+              <h1 id="jumbo">Rewards Management System</h1>
+              <p id="jumbo1">"Reward is a form of regconigtion that serves to accorde customers with due compliment. Everyone deserves to be regconised"</p>
+            </div>
+
+<form method="post" action="/rewards-admin" class="createForm" role="form">
+  <div class="form-group">
+    <label for="category">Category</label>
+    <select class="form-control" id="category" name="category">
+      <option>57d5721f77ee3fc66ec5d09d</option>
+      <option>57d5725077ee3fc66ec5d09e</option>
+      <option>57d5758577ee3fc66ec5d09f</option>
+    </select>
+  </div>
+
+ <div class="form-group">
+   <label for="name">Name of Product or Reward</label>
+   <input type="text" class="form-control" id="name" name="name" aria-describedby="product" placeholder="Enter product name">
+   <small id="emailHelp" class="form-text text-muted">Please enter a name of the product or service offer</small>
+ </div>
+
+
+ <div class="form-group">
+   <label for="price">Original Price</label>
+   <input type="text" class="form-control" id="price" name="price" placeholder="Original price">
+ </div>
+
+ <div class="form-group">
+   <label for="points">Reward Points</label>
+   <input type="text" class="form-control" id="points" name="points" placeholder="Reward Points">
+ </div>
+
+ <div class="form-group">
+   <label for="description">Product Description</label>
+   <textarea class="form-control" id="description" name="description" rows="10" placeholder="please enter your product description"></textarea>
+ </div>
+
+ <div class="form-group">
+   <label for="image">image</label>
+   <input type="text" class="form-control" id="image" name="image" placeholder="Please enter your product image url">
+ </div>
+
+
+ <div class="form-group">
+   <label for="exampleInputFile">Product Image</label>
+   <input type="file" class="form-control-file" id="image" aria-describedby="fileHelp">
+   <small id="fileHelp" class="form-text text-muted" name="#">Please upload one image of the product</small>
+ </div>
+
+ <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>

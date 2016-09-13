@@ -1,0 +1,49 @@
+body{
+  padding-top: 65px;
+}
+
+.jumbotron {
+  margin-top: -5.5%;
+  background-color:blue;
+  background: url('http://wallpapercave.com/wp/Hvtxo6m.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+
+}
+
+#jumbo {
+  color: white;
+}
+
+#jumbo1 {
+  color: white;
+}
+
+.container{
+margin-top: 10px;
+
+}
+
+img {
+  width: 350px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.panel-body{
+  border: 0.5px solid black;
+  width: 110%;
+  margin-left: -60px;
+}
+
+.panel-title{
+  font-size: 30px;
+}
+
+footer {
+  margin: 50px;
+}
+
+.panel.panel-default{
+  width: 150%;
+}
