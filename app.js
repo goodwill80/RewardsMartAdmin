@@ -51,8 +51,8 @@ app.get("/allrewards", function(req, res) {
   });
 });
 
-// get submit new reward page
-app.get("/rewards-admin/:id/edit", function(req, res){  
+// get edit one reward page
+app.get("/rewards-admin/:id/edit", function(req, res){
 var url = "http://localhost:7000/api/rewards/" + req.params.id;
  request(url, function(error, response, body){
    if(!error && response.statusCode == 200){
@@ -64,10 +64,34 @@ var url = "http://localhost:7000/api/rewards/" + req.params.id;
 
 
 //main Routing for users
+//ALL USERS
+app.get("/users-admin", function(req, res){
+  var url = "http://localhost:7000/api/users";
+  request(url, function(error, response, body){
+    if (!error && response.statusCode == 200) {
+      var data = JSON.parse(body);
+      res.render("useradmin", {data: data, title: "All rewards page"})
+    }
+  });
+});
 
-app.get("/users", function(req, res){
-  res.render("users");
-})
+//USER EDIT page
+app.get("/users-admin/:id/edit", function(req, res) {
+  var url = "http://localhost:7000/api/users/" + req.params.id;
+   request(url, function(error, response, body){
+     if(!error && response.statusCode == 200){
+       var data = JSON.parse(body);
+       res.render("useredit", {data: data, title: "Edit" + data.profile.name});
+     }
+   } );
+  });
+
+//Register new user
+app.get("/user-registration", function(req, res){
+res.render("registerusers");
+});
+
+
 
 
 //Server

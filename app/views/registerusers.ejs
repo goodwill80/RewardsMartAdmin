@@ -1,0 +1,68 @@
+<%- layout('layout') -%>
+<div class="container">
+
+  <div class="jumbotron">
+              <h1 id="jumbo">Rewards Management System</h1>
+              <p id="jumbo1">"Reward is a form of appreciation that serves to accorde customers with due compliments in return. Everyone deserves to be recognised"</p>
+            </div>
+
+
+<form method="post" action="/users-admin %>" class="newForm" role="form">
+  <input name="_method" type="hidden" value="PUT">
+
+
+  <h3>New User Creation</h3>
+
+  <div class="form-group">
+    <label for="name">User Name</label>
+    <input type="text" class="form-control" id="name" name="profile.name" aria-describedby="name" placeholder="Please enter full">
+    <small id="Help" class="form-text text-muted">Please enter member's name as per NRIC</small>
+  </div>
+
+  <div class="form-group">
+    <label for="dob">Date of Birth</label>
+    <input type="text" class="form-control" id="dob" name="profile.dob" aria-describedby="dob" placeholder="Please enter full">
+    <small id="Help" class="form-text text-muted">Member's birthday</small>
+  </div>
+
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" class="form-control" id="email" name="email" aria-describedby="email" placeholder="contactable email">
+    <small id="points" class="form-text text-muted">Please enter valid email address</small>
+  </div>
+
+
+ <div class="form-group">
+   <label for="address">User Address</label>
+   <input type="text" class="form-control" id="address" name="address" aria-describedby="product" placeholder="registered address">
+   <small id="address" class="form-text text-muted">Please enter registered address</small>
+ </div>
+
+ <div class="form-group">
+   <label for="membership">Membership</label>
+   <input type="text" class="form-control" id="membership" name="membership" aria-describedby="membership" placeholder="membership, if any">
+   <small id="Help" class="form-text text-muted">Please update membership or company's name</small>
+ </div>
+
+ <div class="form-group">
+   <label for="points">Points</label>
+   <input type="text" class="form-control" id="points" name="points" aria-describedby="points" placeholder="points, if any">
+   <small id="Help" class="form-text text-muted">Reward points</small>
+ </div>
+
+ <div class="form-group">
+   <label for="password">Default Password</label>
+   <input type="text" class="form-control" id="password" name="password" aria-describedby="password" placeholder="Please enter a default password">
+   <small id="Help" class="form-text text-muted">Default password</small>
+ </div>
+
+
+ <button type="submit" class="btn btn-primary">Submit</button>
+ <div class="buttonside">
+ <p><a class="btn btn-danger" href="/users-admin" role="button">Cancel &raquo;</a></p>
+ </div>
+</form>
+
+
+</div>

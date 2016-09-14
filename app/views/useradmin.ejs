@@ -1,0 +1,38 @@
+<%- layout('layout') -%>
+
+<div class="container">
+<div class="jumbotron">
+            <h1 id="jumbo">Rewards Management System</h1>
+            <p id="jumbo1">"Reward is a form of appreciation that serves to accorde customers with due compliments in return. Everyone deserves to be recognised"</p>
+          </div>
+
+<h1>All Users</h1>
+
+<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+	<thead>
+<tr>
+  <td class="warning">Username</td>
+  <td class="warning">Email</td>
+  <td class="warning">Address</td>
+  <td class="warning">Membership</td>
+  <td class="warning">Points</td>
+  <td class="warning">Edit</td>
+</tr>
+</thead>
+<% for (var i = 0; i < data.length; i++) { %>
+  <tbody>
+    <tr>
+      <td class="active"><%= data[i].profile.name %></td>
+      <td class="active"><%= data[i].email %></td>
+      <td class="active"><%= data[i].address %></td>
+      <td class="active"><%= data[i].membership %></td>
+      <td class="active"><%= data[i].points %></td>
+      <td class="active"><p><a class="btn btn-info" href="/users-admin/<%= data[i]._id %>/edit" role="button">Edit &raquo;</a></p></td>
+    </tr>
+  </tbody>
+  <% } %>
+				</table>
+
+<a class="newuserlink" href="/user-registration">Register New User</a>
+
+</div>
