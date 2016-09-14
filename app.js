@@ -86,6 +86,11 @@ app.get("/users-admin/:id/edit", function(req, res) {
    } );
   });
 
+
+
+
+
+
 //Register new user
 app.get("/user-registration", function(req, res){
 res.render("registerusers");
