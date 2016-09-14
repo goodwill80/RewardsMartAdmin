@@ -42,7 +42,7 @@
             </div> -->
 
 <form method="post" action="/rewards-admin/<%= data._id %>" class="editForm" role="form">
-
+  <input name="_method" type="hidden" value="PUT">
 
  <div class="form-group">
    <label for="name">Name of Product or Reward</label>
@@ -53,22 +53,22 @@
 
  <div class="form-group">
    <label for="price">Original Price</label>
-   <input type="text" class="form-control" id="price" name="price" placeholder="Original price">
+   <input type="text" class="form-control" id="price" name="price" value="<%= data.price %>">
  </div>
 
  <div class="form-group">
    <label for="points">Reward Points</label>
-   <input type="text" class="form-control" id="points" name="points" placeholder="Reward Points">
+   <input type="text" class="form-control" id="points" name="points" value="<%= data.points %>">
  </div>
 
  <div class="form-group">
    <label for="description">Product Description</label>
-   <textarea class="form-control" id="description" name="description" rows="10" placeholder="please enter your product description"></textarea>
+   <textarea class="form-control" id="description" name="description" rows="10" value="Please enter the product / reward description"><%= data.description %></textarea>
  </div>
 
  <div class="form-group">
    <label for="image">image</label>
-   <input type="text" class="form-control" id="image" name="image" placeholder="Please enter your product image url">
+   <input type="text" class="form-control" id="image" name="image" value="<%= data.image %>">
  </div>
 
 

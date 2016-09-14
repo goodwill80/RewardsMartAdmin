@@ -74,32 +74,35 @@ $('.editForm').on("submit", function(e){
     e.preventDefault();
 
     $.ajax({
-      url: server_url + pathname[2],
-      method: "POST",
+      url: server_url + "/" + pathname[2],
+      method: "PUT",
       headers: {
              "Authorization": "Bearer " + localStorage.getItem('token')
            },
       dataType: 'json',
-      data: $('.editForm').serialize()
-    }).done(successFunction)
+      data: $('.editForm').serialize(),
+      beforeSend: function() {
+        }
+    }).done(function successFunction(data, res) {
+
+       console.log(res);
+       console.log(data);
+        window.location.replace("/rewards-admin/" + data._id);
+      })
       .fail(failFunction)
       .always(alwaysFunction);
+    });
 
+  function failFunction(request, textStatus, errorThrown){
 
-    function successFunction(data) {
-      window.location.replace("/rewards-admin/" + data._id);
-    }
+    console.log('An error occurred during your request: ' +  request.status + ' ' + textStatus + ' ' + errorThrown);
+  }
 
-    function failFunction(request, textStatus, errorThrown){
-      // $name.text('An error occurred during your request: ' +  request.status + ' ' + textStatus + ' ' + errorThrown);
-      console.log('An error occurred during your request: ' +  request.status + ' ' + textStatus + ' ' + errorThrown);
-    }
+  // always function
+  function alwaysFunction() {
 
-    // always function
-    function alwaysFunction() {
-      console.log(data)
-    }
-  })
+  }
+
 
 
 
