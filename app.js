@@ -23,7 +23,7 @@ app.get("/", function(req, res) {
   res.render('home');
 });
 
-// Main Routings for rewards
+// get submit new reward page
 app.get("/rewards-admin", function(req, res){
   res.render('rewards');
 });
@@ -40,8 +40,27 @@ app.get("/rewards-admin/:id", function(req, res) {
   } );
 })
 
+//get all rewards page
+app.get("/allrewards", function(req, res) {
+  var url = "http://localhost:7000/api/rewards";
+  request(url, function(error, response, body){
+    if(!error && response.statusCode == 200){
+      var data = JSON.parse(body);
+      res.render("allrewards", {data: data, title: "All rewards page"});
+    }
+  });
+});
 
-
+// get submit new reward page
+app.get("/rewards-admin/:id/edit", function(req, res){  
+var url = "http://localhost:7000/api/rewards/" + req.params.id;
+ request(url, function(error, response, body){
+   if(!error && response.statusCode == 200){
+     var data = JSON.parse(body);
+     res.render("rewardedit", {data: data, title: "Edit" + data.name});
+   }
+ } );
+});
 
 
 //main Routing for users

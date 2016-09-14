@@ -1,0 +1,36 @@
+<%- layout('layout') -%>
+<!-- < <div class="container">
+<h1>All product listing</h1>
+
+  <% for(var i = 0; i < data.length; i++) { %>
+<div class="description">
+  <h3><%= data[i].name %></h3>
+  <img src="<%= data[i].image %>">
+  <h6>SGD $<%= data[i].price %></h6>
+  <h6>Points: <%= data[i].points %></h6>
+  <a href="#">Enter</a>
+	</div>
+  <% } %>
+
+</div> -->
+<div class="container">
+<div class="row">
+<% for(var i = 0; i < data.length; i++) { %>
+       <div class="col-xs-18 col-sm-7 col-md-4  ">
+
+         <div class="thumbnail">
+           <img src="<%= data[i].image %>">
+             <div class="caption">
+               <h4><%= data[i].name %></h4>
+               <p>SGD $<%= data[i].price %></p>
+               <p>Points: <%= data[i].points %></p>
+               <a href="#" class="btn btn-default btn-xs pull-right" role="button"><i class="glyphicon glyphicon-edit"></i></a> <a href="/rewards-admin/<%= data[i]._id %>" class="btn btn-info btn-xs" role="button">Edit/Delete</a>
+            </div>
+           </div>
+
+         </div>
+         <% } %>
+       </div>
+
+</div>
+</div>

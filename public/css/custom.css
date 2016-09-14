@@ -11,6 +11,8 @@ body{
 
 }
 
+
+
 #jumbo {
   color: white;
 }
@@ -22,13 +24,25 @@ body{
 .container{
 margin-top: 10px;
 
+
 }
 
 img {
-  width: 350px;
-  height: 300px;
+  width: 380px;
+  height: 320px;
   margin: 0 auto;
 }
+
+.description {
+  border: 1px solid black;
+  padding: 4px;
+}
+
+#productphoto{
+  width: 30px;
+  height: 30px;
+}
+
 
 .panel-body{
   border: 0.5px solid black;

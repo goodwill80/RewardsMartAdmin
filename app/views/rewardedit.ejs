@@ -1,24 +1,52 @@
 <%- layout('layout') -%>
+<!-- <section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half is-offset-one-quarter">
+
+
+<h1 class="title is-2">Edit Event</h1>
+
+<label class="label">Event Name</label>
+
+<form id="editEvent" method="POST">
+  <input type="hidden" name="_method" value="PUT">
+<p class="control">
+  <input id = "eventname" class="input" type="text" name="name" value="<%= data.name %>">
+</p>
+<label class="label">Event Location</label>
+<p class="control has-icon has-icon-right">
+  <input id = "eventlocation" class="input is-success" type="text" name="location" value="<%= data.location %>">
+</p>
+<label class="label">Description</label>
+<p class="control">
+  <textarea id= "description" class="textarea" name="description"><%= data.description %></textarea>
+</p>
+<p class="control">
+  <input type="submit" name="submit" value="Submit" class="button is-primary is-fullwidth">
+</p>
+</form>
+
+</div>
+</div>
+</div>
+</section> -->
+
+
+<!-- new form -->
 <div id="rewardregister" class="container">
 
-  <div class="jumbotron">
+  <!-- <div class="jumbotron2">
               <h1 id="jumbo">Rewards Management System</h1>
               <p id="jumbo1">"Reward is a form of appreciation that serves to accorde customers with due compliments in return. Everyone deserves to be recognised"</p>
-            </div>
+            </div> -->
 
-<form method="post" action="/rewards-admin" class="createForm" role="form">
-  <div class="form-group">
-    <label for="category">Category</label>
-    <select class="form-control" id="category" name="category">
-      <option>57d5721f77ee3fc66ec5d09d</option>
-      <option>57d5725077ee3fc66ec5d09e</option>
-      <option>57d5758577ee3fc66ec5d09f</option>
-    </select>
-  </div>
+<form method="post" action="/rewards-admin/<%= data._id %>" class="editForm" role="form">
+
 
  <div class="form-group">
    <label for="name">Name of Product or Reward</label>
-   <input type="text" class="form-control" id="name" name="name" aria-describedby="product" placeholder="Enter product name">
+   <input type="text" class="form-control" id="name" name="name" aria-describedby="product" value="<%= data.name %>">
    <small id="emailHelp" class="form-text text-muted">Please enter a name of the product or service offer</small>
  </div>
 
