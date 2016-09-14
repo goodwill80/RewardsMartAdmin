@@ -55,6 +55,7 @@ $('#deleteReward').on("click", function(e){
 
 
     function successFunction(data) {
+      console.log(data);
       console.log("DELETED SUCCESSFULLY");
       window.location.replace("/allrewards");
     }

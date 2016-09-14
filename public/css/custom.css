@@ -11,6 +11,10 @@ body{
 
 }
 
+.buttonside{
+  display: inline-table;
+}
+
 
 
 #jumbo {
