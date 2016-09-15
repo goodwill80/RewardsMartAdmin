@@ -99,6 +99,17 @@ res.render("analytics");
 });
 
 
+//Category
+app.get("/category", function(req, res){
+  var url = "http://localhost:7000/api/category";
+  request(url, function(error, response, body){
+    if (!error && response.statusCode == 200) {
+      var data = JSON.parse(body);
+      res.render("category", {data: data, title: "Categories Summary"})
+    }
+  });
+  });
+
 
 //Server
 app.set('port', (process.env.PORT || 4000));

@@ -6,6 +6,10 @@
     <h1>Edit User Information</h1>
   <h3><%= data.profile.name %></h3>
 
+  <div>
+      <img class="panelprofile" src="<%= data.profile.picture %>">
+  </div>
+  <br>
   <div class="form-group">
     <label for="email">email</label>
     <input type="text" class="form-control" id="email" name="email" aria-describedby="email" value="<%= data.email %>">
@@ -28,6 +32,12 @@
    <label for="points">Points Balance</label>
    <input type="text" class="form-control" id="points" name="points" aria-describedby="points" value="<%= data.points %>">
    <small id="points" class="form-text text-muted">Add Member's points</small>
+ </div>
+
+ <div class="form-group">
+   <label for="points">Image</label>
+   <input type="text" class="form-control" id="picture" name="profile.picture" aria-describedby="points" value="<%= data.profile.picture %>">
+   <small id="picture" class="form-text text-muted">Member's photo</small>
  </div>
 
 

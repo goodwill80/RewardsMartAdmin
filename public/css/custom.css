@@ -50,6 +50,11 @@ img {
   height: 30px;
 }
 
+.panelprofile {
+  height: 60%;
+  width: 20%;
+  border-radius: 25px;
+}
 
 .panel-body{
   border: 0.5px solid black;
