@@ -2,8 +2,8 @@ $(document).ready(function () {
 
 
 
-var server_url = 'http://localhost:7000/api/rewards';
-var server_urlUser = 'http://localhost:7000/api/users';
+var server_url = 'https://blooming-earth-11592.herokuapp.com/api/rewards';
+var server_urlUser = 'https://blooming-earth-11592.herokuapp.com/api/users';
 var pathname = window.location.pathname.split('/');
 
 //Create New Rewards

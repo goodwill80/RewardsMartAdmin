@@ -6,7 +6,7 @@ var expressLayouts = require("express-ejs-layouts");
 var request = require('request');
 var ejsmate = require('ejs-mate');
 
-var server_url = 'http://localhost:7000/api/';
+var server_url = 'https://blooming-earth-11592.herokuapp.com/api/';
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -30,7 +30,7 @@ app.get("/rewards-admin", function(req, res){
 
 ///get single reward based on params id
 app.get("/rewards-admin/:id", function(req, res) {
-  var url = 'http://localhost:7000/api/rewards/' + req.params.id;
+  var url = 'https://blooming-earth-11592.herokuapp.com/api/rewards/' + req.params.id;
   request(url, function(error, response, body){
     if(!error && response.statusCode == 200){
       var data = JSON.parse(body);
@@ -42,7 +42,7 @@ app.get("/rewards-admin/:id", function(req, res) {
 
 //get all rewards page
 app.get("/allrewards", function(req, res) {
-  var url = "http://localhost:7000/api/rewards";
+  var url = "https://blooming-earth-11592.herokuapp.com/api/rewards";
   request(url, function(error, response, body){
     if(!error && response.statusCode == 200){
       var data = JSON.parse(body);
@@ -53,7 +53,7 @@ app.get("/allrewards", function(req, res) {
 
 // get edit one reward page
 app.get("/rewards-admin/:id/edit", function(req, res){
-var url = "http://localhost:7000/api/rewards/" + req.params.id;
+var url = "https://blooming-earth-11592.herokuapp.com/api/rewards/" + req.params.id;
  request(url, function(error, response, body){
    if(!error && response.statusCode == 200){
      var data = JSON.parse(body);
@@ -66,7 +66,7 @@ var url = "http://localhost:7000/api/rewards/" + req.params.id;
 //main Routing for users
 //ALL USERS
 app.get("/users-admin", function(req, res){
-  var url = "http://localhost:7000/api/users";
+  var url = "https://blooming-earth-11592.herokuapp.com/api/users";
   request(url, function(error, response, body){
     if (!error && response.statusCode == 200) {
       var data = JSON.parse(body);
@@ -77,7 +77,7 @@ app.get("/users-admin", function(req, res){
 
 //USER EDIT page
 app.get("/users-admin/:id/edit", function(req, res) {
-  var url = "http://localhost:7000/api/users/" + req.params.id;
+  var url = "https://blooming-earth-11592.herokuapp.com/api/users/" + req.params.id;
    request(url, function(error, response, body){
      if(!error && response.statusCode == 200){
        var data = JSON.parse(body);
@@ -101,7 +101,7 @@ res.render("analytics");
 
 //Category
 app.get("/category", function(req, res){
-  var url = "http://localhost:7000/api/category";
+  var url = "https://blooming-earth-11592.herokuapp.com/api/category";
   request(url, function(error, response, body){
     if (!error && response.statusCode == 200) {
       var data = JSON.parse(body);
